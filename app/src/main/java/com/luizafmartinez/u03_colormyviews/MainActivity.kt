@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet.Layout
 import androidx.core.graphics.convertTo
 import androidx.core.graphics.red
@@ -35,8 +36,10 @@ class MainActivity : AppCompatActivity() {
         val yellow_button = findViewById<Button>(R.id.yellow_button)
         val green_button = findViewById<Button>(R.id.green_button)
 
+         val constraint_layout = findViewById<ConstraintLayout>(R.id.main)
+
         val clickableViews: List<View> = listOf( box_one_text,
-            box_two_text, box_three_text, box_four_text,
+            box_two_text, box_three_text, box_four_text, constraint_layout,
             box_five_text,  red_button, yellow_button, green_button)
 
         for (item in clickableViews) {
